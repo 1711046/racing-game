@@ -128,7 +128,7 @@ for (let index = 0; index < 12; index++) {
     s3 = game.createSprite(randint(0, 4), 0)
     s4 = game.createSprite(randint(0, 4), 0)
     for (let index = 0; index < 5; index++) {
-        basic.pause(250)
+        basic.pause(200)
         s2.change(LedSpriteProperty.Y, 1)
         s3.change(LedSpriteProperty.Y, 1)
         s4.change(LedSpriteProperty.Y, 1)
@@ -173,12 +173,12 @@ for (let index = 0; index < 12; index++) {
             sprite.delete()
             game.pause()
         }
+        s2.delete()
+        s3.delete()
+        s4.delete()
     }
-    basic.showString("win")
-    s2.delete()
-    s3.delete()
-    s4.delete()
 }
+basic.showString("win")
 basic.forever(function () {
     if (GHBit.Rocker(GHBit.enRocker.Right)) {
         sprite.change(LedSpriteProperty.X, 1)
