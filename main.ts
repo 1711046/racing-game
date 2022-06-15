@@ -173,12 +173,13 @@ for (let index = 0; index < 12; index++) {
             sprite.delete()
             game.pause()
         }
-        s2.delete()
-        s3.delete()
-        s4.delete()
     }
+    s2.delete()
+    s3.delete()
+    s4.delete()
 }
 basic.showString("win")
+sprite.delete()
 basic.forever(function () {
     if (GHBit.Rocker(GHBit.enRocker.Right)) {
         sprite.change(LedSpriteProperty.X, 1)
